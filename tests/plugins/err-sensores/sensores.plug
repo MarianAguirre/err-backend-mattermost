@@ -1,0 +1,9 @@
+[Core]
+Name = Sensores
+Module = sensores
+
+[Documentation]
+Description = Este es el plugin para los comandos de los sensores
+
+[Python]
+Version = 3

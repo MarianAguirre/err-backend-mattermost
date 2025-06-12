@@ -1,0 +1,17 @@
+Collecting mattermostdriver
+  Using cached mattermostdriver-7.3.2-py3-none-any.whl.metadata (8.2 kB)
+Collecting websockets>=8 (from mattermostdriver)
+  Using cached websockets-15.0.1-cp313-cp313-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.8 kB)
+Requirement already satisfied: requests>=2.25 in /home/swam/Documentos/matter-bot/err-backend-mattermost/venv/lib/python3.13/site-packages (from mattermostdriver) (2.31.0)
+Requirement already satisfied: charset-normalizer<4,>=2 in /home/swam/Documentos/matter-bot/err-backend-mattermost/venv/lib/python3.13/site-packages (from requests>=2.25->mattermostdriver) (3.4.2)
+Requirement already satisfied: idna<4,>=2.5 in /home/swam/Documentos/matter-bot/err-backend-mattermost/venv/lib/python3.13/site-packages (from requests>=2.25->mattermostdriver) (3.10)
+Requirement already satisfied: urllib3<3,>=1.21.1 in /home/swam/Documentos/matter-bot/err-backend-mattermost/venv/lib/python3.13/site-packages (from requests>=2.25->mattermostdriver) (2.4.0)
+Requirement already satisfied: certifi>=2017.4.17 in /home/swam/Documentos/matter-bot/err-backend-mattermost/venv/lib/python3.13/site-packages (from requests>=2.25->mattermostdriver) (2025.4.26)
+Using cached mattermostdriver-7.3.2-py3-none-any.whl (25 kB)
+Using cached websockets-15.0.1-cp313-cp313-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (182 kB)
+Installing collected packages: websockets, mattermostdriver
+  Attempting uninstall: websockets
+    Found existing installation: websockets 3.2
+    Uninstalling websockets-3.2:
+      Successfully uninstalled websockets-3.2
+Successfully installed mattermostdriver-7.3.2 websockets-15.0.1

@@ -27,7 +27,10 @@ from mattermostdriver.exceptions import (
 from mattermostlib.mattermostPerson import MattermostPerson
 from mattermostlib.mattermostRoom import MattermostRoom
 from mattermostlib.mattermostRoomOccupant import MattermostRoomOccupant
+import ssl
+print("Default SSL context protocol:", ssl.create_default_context().protocol)
 
+context = ssl.create_default_context()
 log = logging.getLogger("errbot.backends.mattermost")
 
 # Default websocket timeout - this is needed to send a heartbeat
@@ -325,6 +328,7 @@ class MattermostBackend(ErrBot):
             if mention != self.bot_identifier.userid:
                 identifier.append(self.build_identifier(mention))
         return identifier
+    
 
     def serve_once(self):
         self.driver = Driver(
@@ -338,6 +342,9 @@ class MattermostBackend(ErrBot):
                 "password": self._password,
                 "token": self._personal_access_token,
                 "mfa_token": self._mfa_token,
+                "websocket_kw_args": {
+                    "ssl": context  # 👈 Esto es clave
+                }
             }
         )
         self.driver.login()
