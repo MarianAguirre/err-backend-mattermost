@@ -8,7 +8,7 @@ import os
 BACKEND = 'Mattermost'  # Usa el backend de Mattermost
 
 # Reemplaza con tu nombre de usuario de Mattermost
-BOT_ADMINS = ('@marian',)
+BOT_ADMINS = ('@marian', '@juan777', '@cristo', '@emmanuelramirez')
 
 # Directorios del bot
 local_dir_path = os.path.dirname(__file__)
@@ -56,3 +56,21 @@ DIVERT_TO_PRIVATE = ()
 # Tiempo máximo de espera para plugins externos
 BOT_ASYNC = False
 AUTOINSTALL_DEPS = False
+
+
+PLUGINS_ENABLED = {
+    'Example',
+    'Help',
+    'VersionChecker',
+    'Backup',
+    'Healt',
+    'Plugins',
+    # Agrega aquí solo los plugins que quieres cargar
+}
+
+PLUGINS_BLACKLIST = {
+    'ChatRoom',
+    'Flows',
+    'TestPlugin',
+    'Utils',
+}

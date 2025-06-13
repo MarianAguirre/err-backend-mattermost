@@ -60,17 +60,17 @@ class TestPlugin(BotPlugin):
             pass
 
         # Threaded message
-        self.send(
-            in_reply_to=message,
-            identifier=message.to,
-            text="Call back threaded message",
-        )
+        # self.send(
+        #     in_reply_to=message,
+        #     identifier=message.to,
+        #     text="Call back threaded message",
+        # )
 
         # Single message
-        self.send(identifier=message.to, text="Call back single message")
+        #self.send(identifier=message.to, text="Call back single message")
 
         #
-        self.send(identifier=message.frm, text="Call back 1to1  message")
+        #self.send(identifier=message.frm, text="Call back 1to1  message")
 
         pass
 
